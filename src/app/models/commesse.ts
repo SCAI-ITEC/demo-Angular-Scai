@@ -96,6 +96,6 @@ export class Commessa {
     }
 
     get percentualeAvanzamentoTotale() {
-        return this.dettaglio.reduce((a, c) => a += +c.percentualeAvanzamento, 0);
+        return this.dettaglio.reduce((a, c) => (+c.percentualeAvanzamento > a ? +c.percentualeAvanzamento : a), 0);
     }
 }
