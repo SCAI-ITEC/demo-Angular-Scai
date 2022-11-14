@@ -1,0 +1,7 @@
+<input type="checkbox" [id]="UUID" hidden>
+<label [for]="UUID">
+    <ng-content select=".coll-trig"></ng-content>
+</label>
+<div class="collapsible-content">
+    <ng-content select=".coll-cont"></ng-content>
+</div>

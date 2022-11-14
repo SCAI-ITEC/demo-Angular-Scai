@@ -1,0 +1,12 @@
+label {
+    cursor: pointer;
+    display: block;
+}
+
+.collapsible-content {
+    display: none;
+}
+
+input:checked ~ .collapsible-content {
+    display: block;
+}

@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="line-up">
+        <app-card class="animate fading delay-4">
+            <ng-container class="c-h">
+                <div>Carlo Donà</div>
+                <div class="text-muted">Project Manager</div>
+            </ng-container>
+            <ng-container class="c-b">
+                <app-pm-view #carloComponent projectManager="Carlo Donà"></app-pm-view>
+            </ng-container>
+            <ng-container class="c-f">
+                <app-pm-view-controls [pmView]="carloComponent"></app-pm-view-controls>
+            </ng-container>
+        </app-card>
+        <app-card class="animate fading delay-6">
+            <ng-container class="c-h">
+                <div>Angelica Zenere</div>
+                <div class="text-muted">Project Manager</div>
+            </ng-container>
+            <ng-container class="c-b">
+                <app-pm-view #angelicaComponent projectManager="Angelica Zenere"></app-pm-view>
+            </ng-container>
+            <ng-container class="c-f">
+                <app-pm-view-controls [pmView]="angelicaComponent"></app-pm-view-controls>
+            </ng-container>
+        </app-card>
+        <app-card class="animate fading delay-8">
+            <ng-container class="c-h">
+                <div>SCAI ITEC</div>
+                <div class="text-muted">Referente Superiore</div>
+            </ng-container>
+            <ng-container class="c-b">
+                <app-referente></app-referente>
+            </ng-container>
+            <ng-container class="c-f">
+                © 2022 SCAI ITEC Tutti i diritti riservati
+            </ng-container>
+        </app-card>
+    </div>
+</div>
+

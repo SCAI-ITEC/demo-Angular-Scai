@@ -1,0 +1,146 @@
+[
+    {
+        "projectManager": "Carlo Donà",
+        "commesse": [
+            {
+                "protocolloCommessa": 1,
+                "descrizioneCommessa": "Commessa 1",
+                "codiceSottocommessa": 2,
+                "descrizioneSottocommessa": "Sottocommessa 1",
+                "dataInizio": "2022-08-01",
+                "dataFine": null,
+                "percentualeAvanzamentoTotale": 40,
+                "cliente": "SCAI",
+                "clienteFinale": "IFIS",
+                "dettaglio": [
+                    {
+                        "mese": "2022-08",
+                        "percentualeAvanzamento": 5,
+                        "stato": "chiuso"
+                    },
+                    {
+                        "mese": "2022-09",
+                        "percentualeAvanzamento": 10,
+                        "stato": "chiuso"
+                    },
+                    {
+                        "mese": "2022-10",
+                        "percentualeAvanzamento": 15,
+                        "stato": "aperto"
+                    }
+                ]
+            },
+            {
+                "protocolloCommessa": 2,
+                "descrizioneCommessa": "Commessa 2",
+                "codiceSottocommessa": 4,
+                "descrizioneSottocommessa": "Sottocommessa 4",
+                "dataInizio": "2022-05-01",
+                "dataFine": "2022-09-30",
+                "percentualeAvanzamentoTotale": 100,
+                "cliente": "SCAI",
+                "clienteFinale": "IFIS",
+                "dettaglio": [
+                    {
+                        "mese": "2022-05",
+                        "percentualeAvanzamento": 15,
+                        "stato": "vistato"
+                    },
+                    {
+                        "mese": "2022-06",
+                        "percentualeAvanzamento": 15,
+                        "stato": "vistato"
+                    },
+                    {
+                        "mese": "2022-08",
+                        "percentualeAvanzamento": 20,
+                        "stato": "chiuso"
+                    },
+                    {
+                        "mese": "2022-09",
+                        "percentualeAvanzamento": 50,
+                        "stato": "chiuso"
+                    }
+                ]
+            },
+            {
+                "protocolloCommessa": 3,
+                "descrizioneCommessa": "Commessa 3",
+                "codiceSottocommessa": 6,
+                "descrizioneSottocommessa": "Sottocommessa 6",
+                "dataInizio": "2022-11-16",
+                "dataFine": null,
+                "percentualeAvanzamentoTotale": 0,
+                "cliente": "SCAI",
+                "clienteFinale": "IFIS",
+                "dettaglio": []
+            }
+        ]
+    },
+    {
+        "projectManager": "Angelica Zenere",
+        "commesse": [
+            {
+                "protocolloCommessa": 1,
+                "descrizioneCommessa": "Commessa 1",
+                "codiceSottocommessa": 2,
+                "descrizioneSottocommessa": "Sottocommessa 1",
+                "dataInizio": "2022-08-01",
+                "dataFine": null,
+                "percentualeAvanzamentoTotale": 50,
+                "cliente": "SCAI",
+                "clienteFinale": "Maser",
+                "dettaglio": [
+                    {
+                        "mese": "2022-08",
+                        "percentualeAvanzamento": 10,
+                        "stato": "chiuso"
+                    },
+                    {
+                        "mese": "2022-09",
+                        "percentualeAvanzamento": 15,
+                        "stato": "chiuso"
+                    },
+                    {
+                        "mese": "2022-10",
+                        "percentualeAvanzamento": 15,
+                        "stato": "aperto"
+                    }
+                ]
+            },
+            {
+                "protocolloCommessa": 2,
+                "descrizioneCommessa": "Commessa 2",
+                "codiceSottocommessa": 4,
+                "descrizioneSottocommessa": "Sottocommessa 4",
+                "dataInizio": "2022-05-01",
+                "dataFine": "2022-09-30",
+                "percentualeAvanzamentoTotale": 100,
+                "cliente": "SCAI",
+                "clienteFinale": "Maser",
+                "dettaglio": [
+                    {
+                        "mese": "2022-05",
+                        "percentualeAvanzamento": 10,
+                        "stato": "vistato"
+                    },
+                    {
+                        "mese": "2022-06",
+                        "percentualeAvanzamento": 20,
+                        "stato": "vistato"
+                    },
+                    {
+                        "mese": "2022-08",
+                        "percentualeAvanzamento": 20,
+                        "stato": "chiuso"
+                    },
+                    {
+                        "mese": "2022-09",
+                        "percentualeAvanzamento": 50,
+                        "stato": "chiuso"
+                    }
+                ]
+            }
+        ]
+    }
+]

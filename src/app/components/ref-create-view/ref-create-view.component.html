@@ -1,0 +1,65 @@
+<form class="d-grid gap-3 mt-3" action="" novalidate (ngSubmit)="creaCommessa()" [formGroup]="form">
+    <div>
+        <label for="pm" class="form-label">Project Manager</label>
+        <select
+            id="pm"
+            class="form-select"
+            formControlName="pm"
+            [class.is-valid]="(pm.touched || pm.dirty) && pm.valid"
+            [class.is-invalid]="(pm.touched || pm.dirty) && pm.invalid"
+        >
+            <option value="" selected disabled>Scegli un Project Manager</option>
+            <option value="Carlo Donà">Carlo Donà</option>
+            <option value="Angelica Zenere">Angelica Zenere</option>
+        </select>
+    </div>
+    <div>
+        <label for="descrizione-commessa" class="form-label">Descrizione Commessa</label>
+        <input
+            type="text"
+            class="form-control"
+            id="descrizione-commessa"
+            formControlName="descrizioneCommessa"
+            placeholder="Inserisci una descrizione"
+            [class.is-valid]="(descrizioneCommessa.touched || descrizioneCommessa.dirty) && descrizioneCommessa.valid"
+            [class.is-invalid]="(descrizioneCommessa.touched || descrizioneCommessa.dirty) && descrizioneCommessa.invalid"
+        >
+    </div>
+    <div>
+        <label for="data-inizio" class="form-label">Data Inizio</label>
+        <input
+            type="date"
+            class="form-control"
+            id="data-inizio"
+            formControlName="dataInizio"
+            [class.is-valid]="(dataInizio.touched || dataInizio.dirty) && dataInizio.valid"
+            [class.is-invalid]="(dataInizio.touched || dataInizio.dirty) && dataInizio.invalid"
+        >
+    </div>
+    <div>
+        <label for="cliente-finale" class="form-label">Cliente Finale</label>
+        <input
+            type="text"
+            class="form-control"
+            id="cliente-finale"
+            placeholder="Es. Banca IFIS"
+            formControlName="clienteFinale"
+            [class.is-valid]="(clienteFinale.touched || clienteFinale.dirty) && clienteFinale.valid"
+            [class.is-invalid]="(clienteFinale.touched || clienteFinale.dirty) && clienteFinale.invalid"
+        >
+    </div>
+    <div class="d-flex justify-content-end">
+        <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="form.invalid"
+        >Crea commessa</button>
+    </div>
+
+    <pre
+        class="alert"
+        [class.alert-secondary]="form.untouched || form.pristine"
+        [class.alert-danger]="(form.touched || form.dirty) && form.invalid"
+        [class.alert-success]="(form.touched || form.dirty) && form.valid"
+    >{{ form.value | json }}</pre>
+</form>

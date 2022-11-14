@@ -1,0 +1,36 @@
+.grid, .subgrid {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #eee;
+}
+
+.subgrid {
+    border-left: 0.5rem solid #eee;
+}
+
+.subgrid-wrapper {
+    margin: 0.5rem 0 0.75rem 0;
+}
+
+.grid.header, .subgrid.header {
+    border-bottom: 1px solid #eee;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.grid > *, .subgrid > *{
+    padding: 2px 4px;
+}
+
+.grid > *:not(:last-child), .subgrid > *:not(:last-child) {
+    border-right: 1px solid #eee;
+}
+
+.justify-self-end {
+    justify-self: end;
+}
+
+input[type="number"] {
+    width: 6ch;
+}

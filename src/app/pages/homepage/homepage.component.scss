@@ -1,0 +1,14 @@
+:host {
+    padding: 1rem;
+}
+
+.line-up {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 600px));
+    justify-content: center;
+}
+
+.line-up ::ng-deep .card {
+    height: 100%;
+}

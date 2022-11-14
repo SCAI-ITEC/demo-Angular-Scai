@@ -1,0 +1,22 @@
+<div class="toasts">
+    <div
+        class="toast show align-items-center text-bg-primary border-0"
+        [class.text-bg-danger]="toast.level === ToastLevel.Danger"
+        [class.text-bg-warning]="toast.level === ToastLevel.Warning"
+        [class.text-bg-success]="toast.level === ToastLevel.Success"
+        [class.text-bg-info]="toast.level === ToastLevel.Info"
+        data-bs-delay="1000"
+        *ngFor="let toast of ts.toasts"
+    >
+        <div class="d-flex">
+            <div class="toast-body">
+                {{ toast.message }}
+            </div>
+            <button
+                type="button"
+                class="btn-close btn-close-white me-2 m-auto"
+                data-bs-dismiss="toast"
+            ></button>
+        </div>
+    </div>
+</div>

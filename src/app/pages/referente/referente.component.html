@@ -1,0 +1,15 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="[{ outlets: {
+            'referente': ['crea']
+        } }]">Crea</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="[{ outlets: {
+            'referente': ['gestisci']
+        } }]">Gestisci</a>
+    </li>
+</ul>
+<div class="outlet-wrapper">
+    <router-outlet name="referente"></router-outlet>
+</div>

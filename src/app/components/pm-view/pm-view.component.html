@@ -1,0 +1,78 @@
+<div class="grid header">
+    <div>Descrizione</div>
+    <div>Cliente Finale</div>
+    <div class="justify-self-end">Data Inizio</div>
+    <div class="justify-self-end">% Totale</div>
+</div>
+<div *ngFor="let commessa of commesse; index as i">
+    <app-collapsible>
+        <ng-container class="coll-trig">
+            <div class="grid">
+                <div>{{ commessa.descrizioneCommessa }}</div>
+                <div>{{ commessa.clienteFinale }}</div>
+                <div class="justify-self-end">{{ commessa.dataInizio }}</div>
+                <div class="justify-self-end">{{ commessa.percentualeAvanzamentoTotale }}</div>
+            </div>
+        </ng-container>
+        <ng-container class="coll-cont">
+            <div class="subgrid-wrapper border border-start-0 rounded-end">
+                <div class="subgrid header">
+                    <div>Seleziona</div>
+                    <div class="justify-self-end">Mese</div>
+                    <div class="justify-self-end">%</div>
+                    <div>Stato</div>
+                </div>
+                <div class="subgrid" *ngFor="let dettaglio of commessa.dettaglio; index as j">
+                    <div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="flexCheckDefault"
+                                [checked]="dettaglio.selezionato"
+                                [disabled]="dettaglio.stato === StatoDettaglio.Chiuso || dettaglio.stato === StatoDettaglio.Vistato"
+                                [class.pointer]="dettaglio.stato === StatoDettaglio.Chiuso || dettaglio.stato !== StatoDettaglio.Vistato"
+                                (click)="seleziona(dettaglio, $event)"
+                            >
+                            <label class="form-check-label" for="flexCheckDefault"></label>
+                        </div>
+                    </div>
+                    <div class="justify-self-end">{{ dettaglio.mese }}</div>
+                    <div class="justify-self-end">
+                        <input
+                            #percentualeAvanzamento
+                            type="number"
+                            [min]="commessa.dettaglio[j-1]?.percentualeAvanzamento || 0"
+                            [max]="commessa.dettaglio[j+1]?.percentualeAvanzamento || 100"
+                            [value]="dettaglio.percentualeAvanzamento"
+                            [disabled]="dettaglio.stato === StatoDettaglio.Chiuso || dettaglio.stato === StatoDettaglio.Vistato"
+                            (change)="dettaglio.percentualeAvanzamento = percentualeAvanzamento.value"
+                        >
+                    </div>
+                    <div class="justify-self-end">
+                        <select
+                            #stato
+                            class="form-select"
+                            [disabled]="dettaglio.stato === StatoDettaglio.Vistato"
+                            (change)="dettaglio.stato = stato.value"
+                        >
+                            <option
+                                [value]="StatoDettaglio.Aperto"
+                                [selected]="dettaglio.stato === StatoDettaglio.Aperto"
+                            >{{ StatoDettaglio.Aperto }}</option>
+                            <option
+                                [value]="StatoDettaglio.Chiuso"
+                                [selected]="dettaglio.stato === StatoDettaglio.Chiuso"
+                            >{{ StatoDettaglio.Chiuso }}</option>
+                            <option
+                                [value]="StatoDettaglio.Vistato"
+                                [selected]="dettaglio.stato === StatoDettaglio.Vistato"
+                                disabled
+                            >{{ StatoDettaglio.Vistato }}</option>
+                        </select>
+                    </div>
+            </div>
+            </div>
+        </ng-container>
+    </app-collapsible>
+</div>
