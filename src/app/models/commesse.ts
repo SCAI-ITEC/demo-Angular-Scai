@@ -39,8 +39,6 @@ export class Commessa {
     dataFine: string;
     _dataFine: Date;
 
-    // percentualeAvanzamentoTotale: number;
-
     cliente: string;
     clienteFinale: string;
 
